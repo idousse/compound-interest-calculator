@@ -1,0 +1,139 @@
+:root {
+  color-scheme: dark;
+  --bg: #0c1017;
+  --card: #121927;
+  --muted: #9ba8c7;
+  --text: #eef2ff;
+  --accent: #6ea8fe;
+  --accent-soft: rgba(110, 168, 254, 0.2);
+  --gain: #58d68d;
+  --border: #2a3650;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(circle at top, #121a2a 0%, var(--bg) 55%);
+  color: var(--text);
+}
+
+.app {
+  width: min(1024px, 92%);
+  margin: 2rem auto;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent), var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  margin-top: 0.4rem;
+  color: var(--muted);
+}
+
+.formula {
+  margin: 1rem 0 0;
+}
+
+.formula img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #030507;
+}
+
+.formula figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.form-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.9rem;
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.62rem 0.7rem;
+  color: var(--text);
+  background: #0d1421;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.results {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.7rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.results article {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #0e1522;
+  padding: 0.75rem;
+}
+
+.results h2 {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.results p {
+  margin-top: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#gains {
+  color: var(--gain);
+}
+
+.chart-card canvas {
+  margin-top: 0.7rem;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0d1421;
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="card">
+        <h1>Compound Interest Calculator</h1>
+        <p class="subtitle">Estimate your portfolio growth with monthly compounding.</p>
+
+        <figure class="formula">
+          <img
+            src="/Users/ioanndousse/.cursor/projects/Users-ioanndousse-Documents-dev-01-personal-projects-trading-compound-interest-calcultor/assets/image-e85f3a80-f40e-4ee4-a4c8-16bb5624aa44.png"
+            alt="Future value formula with principal and monthly contributions"
+          />
+          <figcaption>Future value with monthly contributions and monthly compounding.</figcaption>
+        </figure>
+
+        <form id="calculator-form" class="form-grid">
+          <label>
+            Initial Amount ($)
+            <input type="number" id="principal" min="0" step="100" value="10000" required />
+          </label>
+          <label>
+            Monthly Contribution ($)
+            <input type="number" id="monthlyContribution" min="0" step="50" value="500" required />
+          </label>
+          <label>
+            Annual Rate (%)
+            <input type="number" id="annualRate" min="0" step="0.1" value="8" required />
+          </label>
+          <label>
+            Years
+            <input type="number" id="years" min="1" max="100" step="1" value="20" required />
+          </label>
+        </form>
+
+        <section class="results" aria-live="polite">
+          <article>
+            <h2>Total Value</h2>
+            <p id="futureValue">$0.00</p>
+          </article>
+          <article>
+            <h2>Total Contributions</h2>
+            <p id="contributions">$0.00</p>
+          </article>
+          <article>
+            <h2>Total Gains</h2>
+            <p id="gains">$0.00</p>
+          </article>
+        </section>
+      </section>
+
+      <section class="card chart-card">
+        <h2>Growth Over Time</h2>
+        <canvas id="growthChart" width="900" height="360" aria-label="Investment growth chart"></canvas>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
